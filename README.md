@@ -227,6 +227,52 @@ V7 combines the major capabilities developed throughout the project into a broad
                                             |
                                             v
                                   Web Dashboard / API
-<<<<<<< HEAD
-=======
->>>>>>> c03e5ce (Improve project documentation)
+---
+
+## Screenshots
+
+### V1 — Basic FIM
+
+![V1 Baseline](screenshots/v1-baseline.png)
+
+![V1 File Modified](screenshots/v1-file-modified.png)
+
+### V2 — Dashboard
+
+![V2 Dashboard](screenshots/v2-dashboard.png)
+
+### V3 — Investigation
+
+![V3 Dashboard](screenshots/v3-dashboard.png)
+
+![V3 Investigation](screenshots/v3-investigation.png)
+
+### V4 — Windows Event 4663
+
+![V4 Investigation](screenshots/v4-4663-investigation.png)
+
+### V5 — SOC Triage
+
+![V5 Analyst Triage](screenshots/v5-analyst-triage.png)
+
+![V5 SOC Triage](screenshots/v5-soc-triage.png)
+
+### V6 — Sysmon Event 11
+
+![V6 Baseline](screenshots/v6-baseline.png)
+
+![V6 Dashboard](screenshots/v6-dashboard-sysmon.png)
+
+![V6 Event 11 Modification](screenshots/v6-event11-modification.png)
+
+![V6 Investigation](screenshots/v6-investigation-sysmon.png)
+
+### V7 — Mini-SIEM
+
+![V7 Baseline](screenshots/v7-baseline.png)
+
+![V7 Dashboard](screenshots/v7-dashboard.png)
+
+![V7 Investigation Analysis](screenshots/v7-investigation-analysis.png)
+
+![V7 Response Playbook](screenshots/v7-response-playbook.png)
