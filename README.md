@@ -351,84 +351,48 @@ V7 combines the major capabilities developed throughout the project into a broad
 \# Architecture
 
 
+## Architecture
 
 ```text
+                    WINDOWS FILE ACTIVITY
+                             |
+                             v
+                    +------------------+
+                    |   Python FIM     |
+                    |     Engine       |
+                    +------------------+
+                             |
+               +-------------+-------------+
+               |                           |
+               v                           v
+        SHA-256 Baseline           Endpoint Telemetry
+                                            |
+                              +-------------+-------------+
+                              |                           |
+                              v                           v
+                       Sysmon Event 11        Windows Security 4663
+                              |                           |
+                              +-------------+-------------+
+                                            |
+                                            v
+                                   Event Correlation
+                                            |
+                                            v
+                                    Detection / Scoring
+                                            |
+                                            v
+                                  ATT&CK Candidate Context
+                                            |
+                                            v
+                                      SOC Investigation
+                                            |
+                                            v
+                                     Controlled Response
+                                            |
+                                            v
+                                   SQLite + Audit Log
+                                            |
+                                            v
+                                  Web Dashboard / API
 
-&#x20;               WINDOWS FILE ACTIVITY
-
-&#x20;                        |
-
-&#x20;                        v
-
-&#x20;              +--------------------+
-
-&#x20;              | Python FIM Engine  |
-
-&#x20;              +--------------------+
-
-&#x20;                        |
-
-&#x20;             +----------+----------+
-
-&#x20;             |                     |
-
-&#x20;             v                     v
-
-&#x20;      SHA-256 Baseline       Endpoint Telemetry
-
-&#x20;                                  |
-
-&#x20;                   +--------------+--------------+
-
-&#x20;                   |                             |
-
-&#x20;                   v                             v
-
-&#x20;            Sysmon Event 11            Windows Security 4663
-
-&#x20;                   |                             |
-
-&#x20;                   +--------------+--------------+
-
-&#x20;                                  |
-
-&#x20;                                  v
-
-&#x20;                        Event Correlation
-
-&#x20;                                  |
-
-&#x20;                                  v
-
-&#x20;                      Detection / Scoring
-
-&#x20;                                  |
-
-&#x20;                                  v
-
-&#x20;                   MITRE ATT\&CK Candidate Context
-
-&#x20;                                  |
-
-&#x20;                                  v
-
-&#x20;                        SOC Investigation
-
-&#x20;                                  |
-
-&#x20;                                  v
-
-&#x20;                      Controlled Response
-
-&#x20;                                  |
-
-&#x20;                                  v
-
-&#x20;                      SQLite + Audit Log
-
-&#x20;                                  |
-
-&#x20;                                  v
-
-&#x20;                        Web Dashboard / API
-
+                                  
