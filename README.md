@@ -227,3 +227,6 @@ V7 combines the major capabilities developed throughout the project into a broad
                                             |
                                             v
                                   Web Dashboard / API
+<<<<<<< HEAD
+=======
+>>>>>>> c03e5ce (Improve project documentation)
