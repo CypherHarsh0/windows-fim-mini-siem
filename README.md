@@ -227,6 +227,8 @@ V7 combines the major capabilities developed throughout the project into a broad
                                             |
                                             v
                                   Web Dashboard / API
+```
+
 ---
 
 ## Screenshots
@@ -276,3 +278,177 @@ V7 combines the major capabilities developed throughout the project into a broad
 ![V7 Investigation Analysis](screenshots/v7-investigation-analysis.png)
 
 ![V7 Response Playbook](screenshots/v7-response-playbook.png)
+
+---
+
+## Technology Stack
+
+- Python
+- Watchdog
+- Flask
+- SQLite
+- Microsoft Sysmon
+- Windows Security Event Logs
+- SHA-256
+- REST API
+- HTML / Jinja templates
+
+---
+
+## Quick Start
+
+Clone the repository:
+
+```bash
+git clone https://github.com/CypherHarsh0/windows-fim-mini-siem.git
+cd windows-fim-mini-siem
+```
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Run the required project version as needed:
+
+```bash
+python fim_v1.py
+```
+
+For later versions, use the corresponding script:
+
+```text
+fim_v2.py
+fim_v3.py
+fim_v4.py
+fim_v5.py
+fim_v6.py
+fim_v7.py
+```
+
+---
+
+## Sysmon Configuration
+
+The project includes the Sysmon configuration used for FIM-related telemetry:
+
+```text
+config/sysmon-fim.xml
+```
+
+V6 uses Sysmon Event ID 11 correlation.
+
+V7 expands the correlation workflow by using Sysmon Event ID 11 together with Windows Security Event 4663.
+
+---
+
+## Investigation Workflow
+
+The project follows a simplified SOC investigation lifecycle:
+
+```text
+File Activity
+     |
+     v
+FIM Detection
+     |
+     v
+Event Correlation
+     |
+     v
+Detection / Scoring
+     |
+     v
+Investigation
+     |
+     v
+Analyst Notes
+     |
+     v
+Status Update
+     |
+     v
+Controlled Response
+     |
+     v
+Audit Logging
+```
+
+---
+
+## Security Design
+
+The project is designed for a controlled Windows security lab environment.
+
+Important design principles include:
+
+- Trusted SHA-256 baselines are used as the reference state.
+- Endpoint telemetry is correlated with file activity when available.
+- ATT&CK mappings are treated as candidate context, not proof of malicious behavior.
+- Response actions are controlled rather than automatically executed.
+- Quarantine is restricted to the designated lab environment.
+- Analyst actions are recorded in audit logs.
+
+---
+
+## Scope & Limitations
+
+This is a learning and portfolio project designed to demonstrate practical SOC concepts.
+
+It is not intended to replace a production enterprise SIEM, EDR, or full-scale SOAR platform.
+
+Detection quality depends on:
+
+- Baseline accuracy
+- Available Windows telemetry
+- Sysmon configuration
+- Event timing
+- Correlation windows
+- Analyst validation
+
+---
+
+## Learning Outcomes
+
+This project demonstrates practical experience with:
+
+- File Integrity Monitoring
+- SHA-256 hashing
+- Windows event analysis
+- Sysmon telemetry
+- Security event correlation
+- SOC investigation workflows
+- Alert triage
+- Detection engineering concepts
+- MITRE ATT&CK contextualization
+- SQLite event storage
+- Flask dashboards
+- REST APIs
+- Controlled response workflows
+- Security audit logging
+
+---
+
+## Future Improvements
+
+Potential future enhancements include:
+
+- More advanced detection rules
+- Additional Sysmon event correlation
+- Improved authentication and access control
+- Threat intelligence enrichment
+- Detection rule configuration through the UI
+- More advanced dashboards and visualizations
+- Alert deduplication
+- Investigation timelines
+- Production-grade deployment
+- Integration with external SIEM platforms
+
+---
+
+## Author
+
+**CypherHarsh0**
+
+Windows File Integrity Monitoring & Mini-SIEM
