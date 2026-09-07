@@ -1,0 +1,15 @@
+<Sysmon schemaversion="4.90">
+  <EventFiltering>
+
+    <!-- Process creation -->
+    <ProcessCreate onmatch="include">
+      <Image condition="is not">C:\Windows\System32\svchost.exe</Image>
+    </ProcessCreate>
+
+    <!-- File creation / overwrite -->
+    <FileCreate onmatch="include">
+      <TargetFilename condition="begin with">C:\Users\nomul\Desktop\FIMS project\SOC-Lab\Monitored\</TargetFilename>
+    </FileCreate>
+
+  </EventFiltering>
+</Sysmon>

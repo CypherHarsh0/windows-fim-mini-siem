@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+venv/
+.venv/
+
+# Runtime databases
+*.db
+*.sqlite
+*.sqlite3
+
+# Generated baselines
+baseline.json
+baseline_v*.json
+
+# Runtime logs / alerts
+*.log
+*.jsonl
+
+# Local lab data
+SOC-Lab/Monitored/
+SOC-Lab/Quarantine/
+
+# IDE / OS files
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
